@@ -29,8 +29,18 @@ public class JobForm {
      */
 
     private ArrayList<Employer> employers;
+
+
+    @NotNull
+    private int locationId;
     private ArrayList<Location> locations;
+
+    @NotNull
+    private int coreCompetencyId;
     private ArrayList<CoreCompetency> coreCompetencies;
+
+    @NotNull
+    private int positionTypeId;
     private ArrayList<PositionType> positionTypes;
 
     public JobForm() {
@@ -42,6 +52,10 @@ public class JobForm {
         */
 
         employers = jobData.getEmployers().findAll();
+        locations = jobData.getLocations().findAll();
+        coreCompetencies = jobData.getCoreCompetencies().findAll();
+        positionTypes = jobData.getPositionTypes().findAll();
+
 
     }
 
